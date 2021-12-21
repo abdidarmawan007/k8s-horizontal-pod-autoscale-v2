@@ -1,5 +1,5 @@
-# apiVersion: autoscaling/v2beta2
-apiVersion: autoscaling/v2
+apiVersion: autoscaling/v2beta2
+#apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: production-test
@@ -19,7 +19,7 @@ spec:
         type: Utilization
         averageUtilization: 70
   behavior:
-  scaleDown:
+   scaleDown:
     stabilizationWindowSeconds: 300
     policies:
     - type: Pods
@@ -29,7 +29,7 @@ spec:
       value: 10
       periodSeconds: 60
     selectPolicy: Min  
-  scaleUp:
+   scaleUp:
     stabilizationWindowSeconds: 0
     policies:
     - type: Percent
