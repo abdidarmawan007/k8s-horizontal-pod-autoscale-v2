@@ -1,6 +1,5 @@
-apiVersion: autoscaling/v2beta2
 # version gke 1.23
-#apiVersion: autoscaling/v2
+apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: production-test
